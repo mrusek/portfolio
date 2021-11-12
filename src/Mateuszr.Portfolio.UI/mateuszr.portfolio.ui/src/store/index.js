@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createContactStore from './modules/contact';
-
+import createLogger from 'vue';
 
 Vue.use(Vuex);
 const isDebug = process.env.NODE_ENV !== 'production'

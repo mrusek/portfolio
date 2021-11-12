@@ -33,7 +33,7 @@ const actions = {
     }
 }
 const getters = {
-    getAllInfo = state => {
+    getAllInfo (state) {
         return {
             emailAddress: state.emailAddres,
             phoneNumber: state.phoneNumber,
