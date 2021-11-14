@@ -1,19 +1,19 @@
-import VueRouter from 'vue-router';
-import Contact from '../components/contact';
-import Home from '../components/home';
-import Cv from '../components/cv';
-import Description from '../components/description';
+import {createRouter, createWebHashHistory} from 'vue-router';
+// import Contact from '../components/contact';
+// import Home from '../components/home';
+// import Cv from '../components/cv';
+// import Description from '../components/description';
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/contact', component: Contact },
-    { path: '/cv', component: Cv },
-    { path: '/description', component: Description },
+    // { path: '/', component: Home },
+    // { path: '/contact', component: Contact },
+    // { path: '/cv', component: Cv },
+    // { path: '/description', component: Description },
 ]
 
-const router = VueRouter.createRouter(
+const router = createRouter(
     {
-        history: VueRouter.createWebHashHistory(),
+        history: createWebHashHistory(),
         routes: routes
     }
 )

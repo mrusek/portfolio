@@ -1,12 +1,14 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import {createStore} from 'vuex';
 import createContactStore from './modules/contact';
-import createLogger from 'vue';
+import createSkillsStore from './modules/skills';
+import createCvStore from './modules/cv';
+import createDescriptionStore from './modules/description';
+import createHomeStore from './modules/home';
+import {createLogger} from 'vuex';
 
-Vue.use(Vuex);
 const isDebug = process.env.NODE_ENV !== 'production'
 function createRootStore() {
-    return new Vuex.Store({
+    return createStore({
         modules: {
             home: createHomeStore(),
             cv: createCvStore(),
