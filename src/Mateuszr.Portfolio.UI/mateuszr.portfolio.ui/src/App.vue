@@ -1,101 +1,100 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="glossy">
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-        />
+  <div class="q-pa-md">
+    <q-layout view="lHh Lpr lff" class="shadow-2 rounded-borders">
+      <q-header class="bg-teal shadow-2">
+        <q-toolbar class="glossy">
+          <!-- <q-btn flat @click="drawer = !drawer" round dense icon="menu" /> -->
+          <q-toolbar-title></q-toolbar-title>
+        </q-toolbar>
+      </q-header>
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+      <q-drawer
+        elevated
+        v-model="drawer"
+        show-if-above
+        :mini="miniState"
+        @mouseover="miniState = false"
+        @mouseout="miniState = true"
+        :width="200"
+        :breakpoint="500"
+        bordered
+        class="bg-grey-3"
+      >
+        <q-scroll-area style="height: calc(100% - 100px); margin-top: 50px; border-right: 1px solid #ddd">
+          <q-list >
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="far fa-list-alt" class="text-teal" />
+              </q-item-section>
 
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+              <q-item-section> CV </q-item-section>
+            </q-item>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      class="bg-grey-2"
-    >
-      <q-list>
-        <q-item-label header>Essential Links</q-item-label>
-        <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="school" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/">
-          <q-item-section avatar>
-            <q-icon name="code" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Github</q-item-label>
-            <q-item-label caption>github.com/quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="chat" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Discord Chat Channel</q-item-label>
-            <q-item-label caption>chat.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="forum" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Forum</q-item-label>
-            <q-item-label caption>forum.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://twitter.com/quasarframework">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="fas fa-edit" class="text-teal" />
+              </q-item-section>
 
-    <q-page-container>
-      <HelloWorld />
-    </q-page-container>
-  </q-layout>
+              <q-item-section> Description </q-item-section>
+            </q-item>
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="fas fa-hat-wizard" class="text-teal" />
+              </q-item-section>
+
+              <q-item-section> Skills </q-item-section>
+            </q-item>
+
+            <q-separator />
+
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="fas fa-address-card" class="text-teal" />
+              </q-item-section>
+
+              <q-item-section> Contact </q-item-section>
+            </q-item>
+          </q-list>
+        </q-scroll-area>
+        <q-img
+          class="absolute-top"
+          src="https://cdn.quasar.dev/img/material.png"
+          style="height: 50px"
+        >
+          <div class="absolute-bottom bg-transparent padding-3">
+            <q-avatar size="46px" class="q-mb-sm margin-bottom-0">
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            </q-avatar>
+          </div>
+        </q-img>
+      </q-drawer>
+      <q-page-container>
+        <router-view></router-view>
+      </q-page-container>
+      <q-footer style="background-color: white; color: black">
+        <span>© Mateusz Rusek 2021</span></q-footer
+      >
+    </q-layout>
+  </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "vue";
+//import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'LayoutDefault',
+  name: "App",
 
   components: {
-    HelloWorld
+    // HelloWorld
   },
 
-  setup () {
+  setup() {
     return {
-      leftDrawerOpen: ref(false)
-    }
-  }
-}
+      drawer: ref(false),
+      miniState: ref(true),
+    };
+  },
+};
 </script>

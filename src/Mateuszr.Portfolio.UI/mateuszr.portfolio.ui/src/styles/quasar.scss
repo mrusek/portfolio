@@ -1,3 +1,18 @@
 @import './quasar.variables.scss';
 @import '~quasar-styl';
+
+.bg-teal {
+    background-color: teal-4;
+}
+
+.teal-color {
+    color:teal-3;
+}
+
+.padding-3 {
+    padding:3px !important;
+}
+.margin-bottom-0 {
+    margin-bottom: 0px !important;
+}
 // @import '~quasar-addon-styl';
