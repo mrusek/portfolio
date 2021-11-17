@@ -1,5 +1,8 @@
+
 const state = () => ({
-    
+    hardSkills: [],
+    softSkills: [],
+    passions: []
 })
 const mutations = {
    
