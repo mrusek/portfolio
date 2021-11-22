@@ -1,13 +1,13 @@
 <template>
 <q-page>
-<div>Home</div>
+<div>CV</div>
 </q-page>
 </template>
 
 <script>
 
 export default {
-name: 'Home',
+name: 'Cv',
 components: {
 
 },

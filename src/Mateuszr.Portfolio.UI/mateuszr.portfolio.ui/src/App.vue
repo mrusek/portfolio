@@ -22,7 +22,7 @@
       >
         <q-scroll-area style="height: calc(100% - 100px); margin-top: 50px; border-right: 1px solid #ddd">
           <q-list >
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple @click="$router.push({ path: '/cv', replace: true })">
               <q-item-section avatar>
                 <q-icon name="far fa-list-alt" class="text-teal" />
               </q-item-section>
@@ -30,7 +30,7 @@
               <q-item-section> CV </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple @click="$router.push({ path: '/description', replace: true })">
               <q-item-section avatar>
                 <q-icon name="fas fa-edit" class="text-teal" />
               </q-item-section>
@@ -38,7 +38,7 @@
               <q-item-section> Description </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple  @click="$router.push({ path: '/skills', replace: true })">
               <q-item-section avatar>
                 <q-icon name="fas fa-hat-wizard" class="text-teal" />
               </q-item-section>
@@ -48,7 +48,7 @@
 
             <q-separator />
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple  @click="$router.push({ path: '/contact', replace: true })">
               <q-item-section avatar>
                 <q-icon name="fas fa-address-card" class="text-teal" />
               </q-item-section>
@@ -57,17 +57,17 @@
             </q-item>
           </q-list>
         </q-scroll-area>
-        <q-img
-          class="absolute-top"
+        <div
+          class="absolute-top bg-teal glossy"
           src="https://cdn.quasar.dev/img/material.png"
           style="height: 50px"
         >
-          <div class="absolute-bottom bg-transparent padding-3">
+          <div class="absolute-bottom bg-transparent padding-3 link" @click="$router.push({ path: '/', replace: true })">
             <q-avatar size="46px" class="q-mb-sm margin-bottom-0">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
           </div>
-        </q-img>
+        </div>
       </q-drawer>
       <q-page-container>
         <router-view></router-view>
@@ -82,7 +82,7 @@
 <script>
 import { ref } from "vue";
 //import HelloWorld from './components/HelloWorld.vue'
-
+import router from 'vue-router';
 export default {
   name: "App",
 

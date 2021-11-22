@@ -1,1 +1,0 @@
-import skillsService from '../../api/skillsService';
