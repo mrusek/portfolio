@@ -1,5 +1,6 @@
 @import './quasar.variables.scss';
 @import '~quasar-styl';
+@import './fonts.scss';
 
 .bg-teal {
     background-color: teal-4;
@@ -18,4 +19,40 @@
 .link:hover {
     cursor: pointer;
 }
-// @import '~quasar-addon-styl';
+.fit-content {
+    margin:20px;
+    max-width:900px;
+    display: flex;
+}
+.page-container {
+    display: flex;
+    justify-content: center;
+}
+.fit-content > img {
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: stretch;
+    object-fit: cover;
+}
+.skewed-text {
+    font-family: Indie Flower;
+    font-size: 1.5em;
+    width: 100%;
+    margin-left: -100%;
+    padding: 90px 0 0 90px;
+  //  position: absolute;
+ // top: 11%;
+ // left: 29%;
+  max-width: 750px;
+ // transform: rotate(-10deg);
+  /* Safari */
+  -webkit-transform: rotate(-10deg);
+  /* Firefox */
+ // -moz-transform: rotate(-90deg);
+  /* Opera */
+ // -o-transform: rotate(-90deg);
+  /* IE */
+ // -ms-transform: rotate(-90deg);
+}
+
