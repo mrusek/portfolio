@@ -35,24 +35,62 @@
     width: stretch;
     object-fit: cover;
 }
+
 .skewed-text {
     font-family: Indie Flower;
     font-size: 1.5em;
     width: 100%;
     margin-left: -100%;
     padding: 90px 0 0 90px;
-  //  position: absolute;
- // top: 11%;
- // left: 29%;
   max-width: 750px;
- // transform: rotate(-10deg);
+  transform: rotate(-10deg);
   /* Safari */
   -webkit-transform: rotate(-10deg);
   /* Firefox */
- // -moz-transform: rotate(-90deg);
+  -moz-transform: rotate(-10deg);
   /* Opera */
- // -o-transform: rotate(-90deg);
+  -o-transform: rotate(-10deg);
   /* IE */
- // -ms-transform: rotate(-90deg);
+  -ms-transform: rotate(-10deg);
 }
+
+.concentric-circles {
+    width: 30px;
+    height: 30px;
+    margin-top: 50px;
+    margin-left: 50%;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+    animation: ripple 2.0s 0.2s infinite;
+    -webkit-animation: ripple 2.0s 0.2s  infinite;
+  }
+
+  .concentric-circles:hover {
+    transform: translateX(-50%) scale(1.2);
+  }
+  
+  @keyframes ripple {
+    20% {
+      box-shadow: 0px 0px 0px 6px #fff,
+                  0px 0px 0px 8px #222;
+    }
+    
+    50% {
+      box-shadow: 0px 0px 0px 6px #fff,
+                  0px 0px 0px 8px #222,
+                  0px 0px 0px 14px #fff,
+                  0px 0px 2px 16px #888;
+    }
+    
+    100% {
+      box-shadow: 0px 0px 0px 6px #fff,
+                  0px 0px 0px 8px #222,
+                  0px 0px 0px 14px #fff,
+                  0px 0px 2px 16px #888, 
+                  0px 0px 0px 22px #fff,
+                  0px 0px 5px 24px #ddd;
+    }
+  }
 
