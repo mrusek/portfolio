@@ -79,12 +79,9 @@
     margin-left: -2.5%;
     margin-top: 33%;
   }
-  .concentric-circles-4-container {
-    margin-left: -83%;
-    margin-top: 63%;
-  }
   .concentric-circles:hover {
     transform: translateX(-50%) scale(1.2);
+    cursor:pointer;
   }
   @keyframes ripple {
     20% {
