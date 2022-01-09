@@ -1,12 +1,13 @@
 <template>
   <div class="q-pa-md">
-    <q-table 
-    title="Treats" 
-    :rows="rows" 
-    :columns="columns" 
-    row-key="name"
-    :rows-per-page-options="rowsPerPage??[0]" 
-    hide-bottom>
+    <q-table
+      title="Treats"
+      :rows="rows"
+      :columns="columns"
+      row-key="name"
+      :rows-per-page-options="rowsPerPage ?? [0]"
+      hide-bottom
+    >
       <template v-slot:header="props">
         <q-tr :props="props">
           <q-th auto-width />
@@ -16,17 +17,16 @@
         </q-tr>
       </template>
       <template v-slot:top="props">
-        <div class="table-title">{{title}}</div>
+        <div class="table-title">{{ title }}</div>
       </template>
-         <template v-slot:pagination="props">
-             <div v-if="showPagination">
-             </div>
-             
-           </template>
+      <template v-slot:pagination="props">
+        <div v-if="showPagination"></div>
+      </template>
       <template v-slot:body="props">
         <q-tr :props="props">
           <q-td auto-width>
             <q-btn
+              v-show="showExpand"
               size="sm"
               v-bind:color="btnColor"
               round
@@ -41,9 +41,8 @@
         </q-tr>
         <q-tr v-show="props.expand" :props="props">
           <q-td colspan="100%">
-            <div class="text-left">
-              This is expand slot for row above: {{ props.row.name }}.
-            </div>
+            <div class="flex-container-td">AAAA</div>
+            <div class="flex-container-td-right">BBBB</div>
           </q-td>
         </q-tr>
       </template>
@@ -53,7 +52,15 @@
 <script>
 export default {
   name: "DataTable",
-  props: ["btnColor", "rows", "columns", "title", "showPagination", "rowsPerPage"],
+  props: [
+    "btnColor",
+    "rows",
+    "columns",
+    "title",
+    "showPagination",
+    "showExpand",
+    "rowsPerPage",
+  ],
   setup() {},
 };
 </script>

@@ -35,7 +35,24 @@
     width: stretch;
     object-fit: cover;
 }
+.fit-content-vertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.flex-container-td {
+width: 50%;
+display: inline-flex;
+justify-content: flex-start;
+padding-left: 50px;
+}
+.flex-container-td-right {
+  width: 50%;
+  display: inline-flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
 .skewed-text {
     font-family: Indie Flower;
     font-size: 1.5em;
