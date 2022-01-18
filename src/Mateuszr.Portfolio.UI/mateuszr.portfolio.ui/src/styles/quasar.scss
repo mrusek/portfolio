@@ -1,6 +1,7 @@
 @import './quasar.variables.scss';
 @import '~quasar-styl';
 @import './fonts.scss';
+@import './card.scss';
 
 .bg-teal {
     background-color: $teal-4;
@@ -107,6 +108,21 @@ padding-left: 50px;
     font-size: 2em;
     font-weight:600;
     width:100%;
+  }
+  .rating {
+    width: 226px;
+    margin: 0 auto 1em;
+    font-size: 45px;
+    overflow:hidden;
+    font-family: "Segoe WP","Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .rating > .unmarked {
+    color: #aaa;
+    text-decoration: none;
+  }
+  .rating > .marked {
+    color: orange;
+    text-decoration: none;
   }
   @keyframes ripple {
     20% {

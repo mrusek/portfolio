@@ -41,8 +41,7 @@
         </q-tr>
         <q-tr v-show="props.expand" :props="props">
           <q-td colspan="100%">
-            <div class="flex-container-td">AAAA</div>
-            <div class="flex-container-td-right">BBBB</div>
+            <slot name="subRows"></slot>
           </q-td>
         </q-tr>
       </template>
