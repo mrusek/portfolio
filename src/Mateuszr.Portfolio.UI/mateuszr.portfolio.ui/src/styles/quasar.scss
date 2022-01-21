@@ -41,6 +41,24 @@
   justify-content: center;
   flex-direction: column;
 }
+.card-link {
+  color:whitesmoke;
+  font-family: "Segoe WP","Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  text-decoration: none;
+  border-radius: 10px 10px 10px 10px;
+  background-color: $teal-5-transparent;
+  border: 2px solid $teal-4;
+  padding: 7px;
+}
+.card-link:hover {
+  background-color: $teal-4;
+  border-radius: 10px 10px 10px 10px;
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
 .flex-container-td {
 width: 50%;
