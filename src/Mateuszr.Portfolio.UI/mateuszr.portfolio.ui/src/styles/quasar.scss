@@ -2,7 +2,19 @@
 @import '~quasar-styl';
 @import './fonts.scss';
 @import './card.scss';
-
+@import './homePage.scss';
+.bg-main {
+background: 
+linear-gradient(
+  rgba(0, 0, 0, 0.6),
+  rgba(0, 0, 0, 0.6)
+),
+url('../assets/background.jpg');
+background-size: cover;
+}
+aside {
+  background-color: inherit !important;
+}
 .bg-teal {
     background-color: $teal-4;
 }
@@ -100,6 +112,7 @@ padding-left: 50px;
     transform: translateX(-50%);
     transition: all 0.2s ease-in-out;
     animation: ripple 2.0s 0.2s infinite;
+    -webkit-animation: ripple 2.0s 0.2s  infinite;
     -webkit-animation: ripple 2.0s 0.2s  infinite;
   }
 

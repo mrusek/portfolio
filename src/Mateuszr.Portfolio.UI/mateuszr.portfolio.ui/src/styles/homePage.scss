@@ -1,0 +1,28 @@
+.home { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    a { color: $teal-3; transition: .5s; -moz-transition: .5s; -webkit-transition: .5s; -o-transition: .5s; font-family: 'Muli', sans-serif;}
+
+    a:hover { text-decoration: underline }
+
+
+    h1 { padding-bottom: 15px }
+
+
+    h1 a { font-family: 'Open Sans Condensed', sans-serif; font-size: 48px; color: #333; }
+
+
+    h1 a:hover { color: $teal-3; text-decoration: none; }
+
+
+    p { color: whitesmoke; font-family: 'Muli', sans-serif; margin-bottom: 15px; }
+
+    p.bg-opaque 
+    {
+        
+        background-color: rgba(whitesmoke,0.3);
+        text-align: center;
+    }
+
+}
