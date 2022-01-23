@@ -39,10 +39,24 @@
             {{ col.value }}
           </q-td>
         </q-tr>
-        <q-tr v-show="props.expand" :props="props">
-          <q-td colspan="100%">
-            <slot name="subRows"></slot>
-          </q-td>
+        <q-tr v-show="props.expand" v-for="item in props.row.values" :key="`e_${props.row.index}`" :props="props" >
+            <q-td  colspan="100%">
+              <div class="flex-container-td">{{ item.label }}</div>
+              <div class="flex-container-td-right">
+                <div class="rating">
+                  <span v-bind:class="item.stars > 0 ? 'marked' : 'unmarked'"
+                    >★</span
+                  >
+                  <span v-bind:class="item.stars > 1 ? 'marked' : 'unmarked'"
+                    >★</span
+                  >
+                  <span v-bind:class="item.stars > 2 ? 'marked' : 'unmarked'"
+                    >★</span
+                  >
+                </div>
+              </div>
+              <div></div>
+            </q-td>
         </q-tr>
       </template>
     </q-table>

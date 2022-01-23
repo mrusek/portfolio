@@ -7,7 +7,7 @@
             btnColor="teal-3"
             :rows="softRows"
             :columns="softColumns"
-            title="Soft skills"
+            title="Umiejętności miękkie"
             :showExpand="false"
           ></DataTable>
         </div>
@@ -16,20 +16,20 @@
             btnColor="teal-3"
             :rows="techRows"
             :columns="techColumns"
-            title="Technical skills"
+            title="Umiejętności techniczne"
             :showExpand="true"
           >
-            <template v-slot:subRows=""><!--TODO: Ogarnąć propsy-->
-              <div v-for="item in subRows" :key="item.key">
-                <div class="flex-container-td">{{ item.label }}</div>
+            <template v-slot:subRows="props"><!--TODO: Ogarnąć propsy-->
+              <!-- <div v-if="row.values" v-for="item in row.values" :key="item.key"> -->
+                <div class="flex-container-td">{{ props.row.name }}</div>
                 <div class="flex-container-td-right">
                   <div class="rating">
-                    <span v-bind:class="item.stars > 0 ? 'marked': 'unmarked'">★</span>
-                    <span v-bind:class="item.stars > 1 ? 'marked': 'unmarked'">★</span>
-                    <span v-bind:class="item.stars > 2 ? 'marked': 'unmarked'">★</span>
+                    <span v-bind:class="row.stars > 0 ? 'marked': 'unmarked'">★</span>
+                    <span v-bind:class="row.stars > 1 ? 'marked': 'unmarked'">★</span>
+                    <span v-bind:class="row.stars > 2 ? 'marked': 'unmarked'">★</span>
                   </div>
                 </div>
-              </div>
+              <!-- </div> -->
             </template>
           </DataTable>
         </div>
@@ -51,14 +51,14 @@ const softColumns = [
   {
     name: "acquisitionDate",
     align: "center",
-    label: "Acquisition date",
+    label: "Data otrzymania",
     field: "acquisitionDate",
     format: (val) => `${val ?? "-"}`,
     sortable: true,
   },
   {
     name: "isConfirmed",
-    label: "Certification",
+    label: "Certyfikat",
     field: "certification",
     sortable: true,
     format: (val) => `${val ?? "-"}`,
@@ -68,7 +68,7 @@ const techColumns = [
   {
     name: "name",
     required: true,
-    label: "Name",
+    label: "Nazwa",
     align: "left",
     field: (row) => row.name,
     sortable: true,
@@ -76,14 +76,14 @@ const techColumns = [
   {
     name: "acquisitionDate",
     align: "center",
-    label: "Acquisition date",
+    label: "Data nabycia kompetencji",
     field: "acquisitionDate",
     format: (val) => `${val ?? "-"}`,
     sortable: true,
   },
   {
     name: "isConfirmed",
-    label: "Certification authority",
+    label: "Wystawiający certyfikat",
     field: "certification",
     sortable: true,
     format: (val) => `${val ?? "-"}`,
@@ -92,17 +92,17 @@ const techColumns = [
 
 const softRows = [
   {
-    name: "Driving license cat. B",
+    name: "Prawo jazdy kat. B",
     acquisitionDate: "11.2011",
     certification: "Starostwo powiatowe w pabianicach",
   },
   {
-    name: "English - C1 level",
+    name: "Język angielski poziom C1",
     acquisitionDate: "01.2016",
     certification: "Politechnika Łódzka",
   },
   {
-    name: "Agile development",
+    name: "Praca w zwinnych metodykach tworzenia oprogramowania",
     acquisitionDate: null,
     certification: null,
   },
@@ -111,25 +111,81 @@ const softRows = [
 const techRows = [
   {
     name: ".NET",
-    values: {
-      label: "ASP.NET",
-      stars: 3,
-    },
+    values: 
+      [
+        {
+          label: "ASP.NET",
+          stars: 3
+        },
+        {
+          label: ".NET Framework",
+          stars: 3
+        },
+        {
+          label: "SSRS",
+          stars: 2
+        },
+        {
+          label: ".NET core/.NET 5",
+          stars: 2
+        },
+      ]
   },
   {
     name: "Javascript",
+    values: 
+    [
+      {
+        label: "Knockout.JS",
+        stars: 3
+      },
+      {
+        label: "Vue.JS",
+        stars: 2
+      },
+      {
+        label: "Angular.JS",
+        stars: 2
+      },
+      {
+        label: "React",
+        stars: 1
+      }
+    ]
   },
   {
     name: "SQL",
+    values: 
+    [
+      {
+      label:"SQL Server",
+      stars: 3
+      }
+    ]
   },
   {
-    name: "K2 Five (blackpearl)",
+    name: "Business Process Management",
+    values: 
+    [
+      {
+        label: "K2 Five (blackpearl)",
+        stars: 3
+      }
+    ]
   },
   {
     name: "Sharepoint",
+    values: 
+    [
+      {
+        label: "Sharepoint 2013/2016/2019 on premises",
+        stars: 2
+      }
+    ]
   },
   {
     name: "Other",
+    values: []
   },
 ];
 import DataTable from "../components/DataTable.vue";

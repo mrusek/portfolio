@@ -82,7 +82,6 @@ padding-left: 50px;
   width: 50%;
   display: inline-flex;
   justify-content: flex-end;
-  padding-right: 100px;
 }
 .skewed-text {
     font-family: Indie Flower;
@@ -142,18 +141,19 @@ padding-left: 50px;
   }
   .rating {
     width: 226px;
-    margin: 0 auto 1em;
-    font-size: 45px;
+    font-size: 40px;
     overflow:hidden;
     font-family: "Segoe WP","Segoe UI", Helvetica, Arial, sans-serif;
   }
   .rating > .unmarked {
     color: #aaa;
     text-decoration: none;
+    margin:5px;
   }
   .rating > .marked {
     color: orange;
     text-decoration: none;
+    margin:5px;
   }
   @keyframes ripple {
     20% {
