@@ -4,29 +4,20 @@
       <div class="fit-content">
         <img src="../assets/letter-horizontal.png " />
         <div class="skewed-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
-          molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-          officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-          nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
-          error repudiandae fuga? Ipsa laudantium molestias eos sapiente
-          officiis modi at sunt excepturi expedita sint? Sed quibusdam
-          recusandae alias error harum maxime adipisci amet laborum.
-          Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates a
-          cumque velit quibusdam sed amet tempora. Sit laborum ab, eius fugit
-          doloribus tenetur fugiat, temporibus enim commodi iusto libero magni
-          deleniti quod quam consequuntur! Commodi minima excepturi repudiandae
-          velit hic maxime doloremque. Quaerat provident commodi consectetur
-          veniam similique ad earum omnis ipsum saepe, voluptas, hic voluptates
-          pariatur est explicabo fugiat, dolorum eligendi quam cupiditate
-          excepturi mollitia maiores labore suscipit quas? Nulla, placeat.
-          Voluptatem quaerat non architecto ab laudantium modi minima sunt esse
-          temporibus sint culpa, recusandae aliquam numquam totam ratione
-          voluptas quod exercitationem fuga. Possimus quis earum veniam quasi
-          aliquam eligendi, placeat qui corporis!
+          Drogi czytelniku tej strony!<br>
+          &emsp;Jak zdążyłeś już pewnie zauważyć nazywam się Mateusz Rusek i jestem programistą. 
+          Ukończyłem Politechnikę Łódzką z tytułem inżyniera na kierunku Elektronika i Telekomunikacja
+          oraz uzyskałem tytuł magistra na kierunku Informatyka.<br>
+          &emsp;Prawie całe moje zawodowe doświadczenie obraca się wokół .NET oraz technologii webowych, zarówno tych nowocześniejszych,
+          jak i tych pamiętających starsze czasy. Staram się stale poszerzać swoje kompetencje i poznawać nowe rozwiązania 
+          i nowinki techniczne - ta aplikacja jest jednym z przykładów 🙂.<br>
+          &emsp;Po zakończeniu pracy uwielbiam poszerzać swoje horyzonty i edukować się w innych dziedzinach, najbliżej jednak mi do historii i geografii.
+          Zaczytuję się w książkach z gatunku fantasy, namiętnie gram w gry planszowe i uprawiam sport.<br>
+          &emsp;W życiu zawodowym jak i prywatnym jestem cierpliwy, opanowany i konsekwentny. 
+          Staram się wzbogacać każde towarzystwo w którym się znajdę i każdy zespół którego jestem częścią. 
+          Nie obraziłbym się, gdyby dało się nabyć odrobinę stanowczości w aptekach 😏.<br>
+          Dziękuję Ci za przeczytanie tego opisu, mam szczerą nadzieję że przyjdzie nam wspólnie stawić czoła trudnościom na projektach.<br>
+          <span style="float:right">Mateusz Rusek</span>
         </div>
       </div>
     </div>
