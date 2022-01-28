@@ -39,7 +39,7 @@
             {{ col.value }}
           </q-td>
         </q-tr>
-        <q-tr v-show="props.expand" v-for="item in props.row.values" :key="`e_${props.row.index}`" :props="props" >
+        <q-tr v-show="props.expand" v-for="item in props.row.values" :key="`e_${props.row.index}`" :props="props" class="table-alternate-row-color" >
             <q-td  colspan="100%">
               <div class="flex-container-td">{{ item.label }}</div>
               <div class="flex-container-td-right">

@@ -43,7 +43,7 @@ const softColumns = [
   {
     name: "name",
     required: true,
-    label: "Name",
+    label: "Nazwa",
     align: "left",
     field: (row) => row.name,
     sortable: true,
@@ -68,26 +68,13 @@ const techColumns = [
   {
     name: "name",
     required: true,
-    label: "Nazwa",
+    label: "",
     align: "left",
     field: (row) => row.name,
     sortable: true,
-  },
-  {
-    name: "acquisitionDate",
-    align: "center",
-    label: "Data nabycia kompetencji",
-    field: "acquisitionDate",
-    format: (val) => `${val ?? "-"}`,
-    sortable: true,
-  },
-  {
-    name: "isConfirmed",
-    label: "Wystawiający certyfikat",
-    field: "certification",
-    sortable: true,
-    format: (val) => `${val ?? "-"}`,
-  },
+    classes:"regular-row"
+
+  }
 ];
 
 const softRows = [
