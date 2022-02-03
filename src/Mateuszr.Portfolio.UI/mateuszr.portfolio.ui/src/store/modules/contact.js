@@ -1,46 +1,39 @@
-import contactService from '../../api/contactService';
+import * as contactService from '../../api/contactService';
 const state = () => ({
-    emailAddres: '',
-    phoneNumber: '',
+    telegram: '',
     github: '',
     linkedin: '',
-    isphoneNumberVisible: false
+
 })
 const mutations = {
-    setEmailAddress(state, emailAddres) {
-        state.emailAddres = emailAddres;
-    },
-    setPhoneNumber(state, phoneNumber) {
-        state.phoneNumber = phoneNumber;
-    },
-    setGithub(state, github) {
-        state.github = github;
+    setTelegram(state, telegram) {
+        state.telegram = telegram;
     },
     setLinkedin(state, linkedin) {
         state.linkedin = linkedin;
     },
-    setPhoneNumberVisible(state, phoneNumberVisiblity) {
-        state.isphoneNumberVisible = phoneNumberVisiblity;
+    setGithub(state, github) {
+        state.github = github;
     }
 }
 const actions = {
-    async fetchAllInfo({ commit }) {
-     const info = await contactService.getAllInfo();
-     commit('setEmailAddress',info.emailAddres);
-     commit('setLinkedin',info.linkedin);
-     commit('setPhoneNumber',info.phoneNumber);
-     commit('setGithub',info.github);
+    async fetchGithub({ commit }) {
+    const text = await contactService.getGithub();
+     commit('setGithub',text);
+    },
+    async fetchLinkedin ({commit}) {
+        const text = await contactService.getLinkedin();
+        commit('setLinkedin',text);
+    },
+    async fetchTelegram ({commit}) {
+        const text = await contactService.getTelegram();
+        commit('setTelegram',text);
     }
 }
 const getters = {
-    getAllInfo (state) {
-        return {
-            emailAddress: state.emailAddres,
-            phoneNumber: state.phoneNumber,
-            github: state.github,
-            linkedin: state.linkedin
-        }
-    }
+    linkedin: state => {return state.linkedin},
+    github: state => {return  state.github },
+    telegram: state => {return state.telegram}
 }
 
 export default function createContactStore() {
