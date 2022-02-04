@@ -1,37 +1,30 @@
-import skillsService from '../../api/skillsService';
+import * as skillsService from '../../api/skillsService';
 
 const state = () => ({
-    hardSkills: [],
-    softSkills: [],
-    passions: []
+    technicalSkills: [],
+    softSkills: []
 })
 const mutations = {
-    setHardSkills(state, hardSkills) {
-        state.hardSkills = [...hardSkills];
+    setTechnicalSkills(state, technicalSkills) {
+        state.technicalSkills = [...technicalSkills];
     },
     setSoftSkills(state, softSkills) {
         state.softSkills = [...softSkills];
-    },
-    setPassions(state, passions) {
-        state.passions = [...passions];
     }
 }
 const actions = {
-    async fetchHardSkills({ commit }) {
-        const hardSkills = await skillsService.getHardSkills();
-        commit('setHardSkills', hardSkills);
+    async fetchTechnicalSkills({ commit }) {
+        const technicalSkills = await skillsService.getTechnicalSkills();
+        commit('setTechnicalSkills', technicalSkills);
     },
     async fetchSoftSkills({ commit }) {
         const softSkills = await skillsService.getSoftSkills();
         commit('setSoftSkills', softSkills);
-    },
-    async fetchPassions({ commit }) {
-        const passions = await skillsService.getPassions();
-        commit('setPassions', passions);
     }
 }
 const getters = {
-
+    technicalSkills: state => state.technicalSkills,
+    softSkills: state => state.softSkills
 }
 
 export default function createSkillsStore() {
