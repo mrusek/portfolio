@@ -85,6 +85,15 @@
                 </span></q-item-section
               >
             </q-item>
+            <q-separator size="2px" :dark="true" />
+            <q-item>
+            <q-item-section class="q-mini-drawer-only" avatar>
+                  <flags-section :all="false"></flags-section>
+              </q-item-section>
+              <q-item-section class="q-mini-drawer-hide">
+                  <flags-section :all="true"></flags-section>
+              </q-item-section>
+          </q-item>
           </q-list>
         </q-scroll-area>
         <div
@@ -106,7 +115,7 @@
         <router-view></router-view>
       </q-page-container>
       <q-footer style="background: none">
-        <span>© Mateusz Rusek 2021</span></q-footer
+        <span>© Mateusz Rusek 2023</span></q-footer
       >
     </q-layout>
   </div>
@@ -116,10 +125,12 @@
 import { ref } from "vue";
 //import HelloWorld from './components/HelloWorld.vue'
 import router from "vue-router";
+import FlagsSection from './components/FlagsSection.vue';
 export default {
   name: "App",
 
   components: {
+    FlagsSection
     // HelloWorld
   },
 
