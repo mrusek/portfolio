@@ -1,14 +1,14 @@
-import cv_PL from '../assets/CV_PL.png';
+import {i18n} from '../lang.js';
 const getCvUrl = async function () {
-    return cv_PL;
+    return i18n.global.t("cv.cvUrl");
 };
 const getFirstDescription = async function () {
-    return "Zakres obowiązków: R&D, implementacja oraz prezentacja rozwiązania IoT zbudowanego na platformie Thingworx";
+    return i18n.global.t("cv.firstDescription");
 };
 const getSecondDescription = async function () {
-    return "Zakres obowiązków: Implementacja systemu zarządzania zapytaniami ofertowymi w technologii ASP.NET MVC + Knockout.JS";
+    return i18n.global.t("cv.secondDescription");
 };
 const getThirdDescription = async function () {
-    return "Zakres obowiązków: projektowanie oraz implementacja rozwiązań webowych z zakresu BPM, CRM czy Document Management przy użyciu stosu technologicznego .NET, języka SQL oraz frameworków języka Javascript.";
+    return i18n.global.t("cv.thirdDescription");
 };
 export {getCvUrl, getFirstDescription, getSecondDescription, getThirdDescription};

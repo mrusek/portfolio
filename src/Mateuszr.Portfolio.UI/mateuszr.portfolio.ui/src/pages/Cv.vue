@@ -52,6 +52,20 @@ mounted() {
   this.fetchFirstPositionDescription();
   this.fetchSecondPositionDescription();
   this.fetchThirdPositionDescription();
+  this.$watch(
+      "$i18n.locale",
+      (newLocale, oldLocale) => {
+        if (newLocale === oldLocale) {
+          return
+        }
+
+        this.fetchCvUrl();
+        this.fetchFirstPositionDescription();
+        this.fetchSecondPositionDescription();
+        this.fetchThirdPositionDescription();
+      },
+      { immediate: true } //TODO: Doczytać
+    )
 }
   
 };
